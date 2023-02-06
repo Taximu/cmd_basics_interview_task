@@ -1,14 +1,14 @@
+## Task
 Develop a tool that reads input from the command line, parses the input and writes the output to the console.
 
 CONDITIONS
- The tool should be able to take (any) command line parameters, parse them and write the corresponding output to the console.
- The code should be written in an object oriented way and should show that object oriented design was understood and could be used by the programmer.
- The code should contain short meaningful comments if neccessary.
- The program should be written in a way that it is flexible for potential future requirements and extensions.
- Please do not use any frameworks or existing libraries to solve the problem as this would not show how you would solve the problem.
+-  The tool should be able to accept any command line parameters, parse them and write the corresponding output to the console.
+-  The code should be written in an object oriented way and should show that object oriented design was understood and could be used by the programmer.
+-  The code should contain short meaningful comments if neccessary.
+-  The program should be written in a way that it is flexible for potential future requirements and extensions.
+-  Please do not use any frameworks or existing libraries to solve the problem as this would not show how you would solve the problem.
 
 The following shows which are the command line parameters the tools should react on. Furthermore the corresponding parsing operation and the expected output for every relevant parameter.
-
 Example
 -a [Value 1] [Value 2]
 Value 1: Number
