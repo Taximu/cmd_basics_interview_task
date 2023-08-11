@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SimpleCMDParser
+namespace SimpleCMDParser.Services.Parsing
 {
     internal interface IParser
     {

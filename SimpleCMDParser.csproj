@@ -70,34 +70,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implemenations\CommandLineParser.cs" />
-    <Compile Include="Interfaces\IParser.cs" />
-    <Compile Include="Interfaces\IPrinter.cs" />
-    <Compile Include="Operations\Implementations\Exponention.cs" />
-    <Compile Include="Mapper.cs" />
+    <Compile Include="Infra\PromptConstants.cs" />
+    <Compile Include="Infra\UnityConfig.cs" />
+    <Compile Include="Operations\Implementations\Exponentiation.cs" />
     <Compile Include="Operations\Implementations\NullOperation.cs" />
     <Compile Include="Operations\Interfaces\IOperation.cs" />
-    <Compile Include="Implemenations\CommandLinePrinter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Operations\Implementations\Substitution.cs" />
     <Compile Include="Operations\Implementations\Addition.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="UnityConfig.cs" />
+    <Compile Include="Services\Mapper.cs" />
+    <Compile Include="Services\Parsing\CommandLineParser.cs" />
+    <Compile Include="Services\Parsing\IParser.cs" />
+    <Compile Include="Services\Printing\CommandLinePrinter.cs" />
+    <Compile Include="Services\Printing\IPrinter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
