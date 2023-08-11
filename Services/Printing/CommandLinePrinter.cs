@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace SimpleCMDParser
+namespace SimpleCMDParser.Services.Printing
 {
-    public class CommandLinePrinter : ICmdPrinter
+    public abstract class CommandLinePrinter : ICmdPrinter
     {
         /// <summary>
         /// Sets color of message to red, prints message then resets color.

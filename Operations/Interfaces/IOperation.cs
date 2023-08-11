@@ -1,4 +1,4 @@
-﻿namespace SimpleCMDParser
+﻿namespace SimpleCMDParser.Operations.Interfaces
 {
     public interface IOperation
     {
