@@ -1,6 +1,7 @@
-﻿using Unity;
+﻿using SimpleCMDParser.Services.Printing;
+using Unity;
 
-namespace SimpleCMDParser
+namespace SimpleCMDParser.Infra
 {
     internal static class UnityConfig
     {

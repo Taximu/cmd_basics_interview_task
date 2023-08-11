@@ -1,16 +1,13 @@
-﻿namespace SimpleCMDParser
+﻿using SimpleCMDParser.Operations.Interfaces;
+
+namespace SimpleCMDParser.Operations.Implementations
 {
     public class Substitution : IOperation
     {
         private const int One = 1;
         public string Execute(string arg1, string arg2)
         {
-            if (arg2.Length == One)
-            {
-                return arg1.Replace(arg2, string.Empty);
-            }
-
-            return null;
+            return arg2.Length == One ? arg1.Replace(arg2, string.Empty) : null;
         }
 
         public string GetOutputMessage(string command, string[] args, string result)

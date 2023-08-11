@@ -1,4 +1,4 @@
-﻿namespace SimpleCMDParser
+﻿namespace SimpleCMDParser.Services.Printing
 {
     internal interface ICmdPrinter
     {

@@ -1,4 +1,6 @@
-﻿namespace SimpleCMDParser
+﻿using SimpleCMDParser.Operations.Interfaces;
+
+namespace SimpleCMDParser.Operations.Implementations
 {
     public class Addition : IOperation
     {
