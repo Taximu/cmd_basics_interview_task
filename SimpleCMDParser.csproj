@@ -72,18 +72,15 @@
   <ItemGroup>
     <Compile Include="Infra\PromptConstants.cs" />
     <Compile Include="Infra\UnityConfig.cs" />
-    <Compile Include="Operations\Implementations\Exponentiation.cs" />
-    <Compile Include="Operations\Implementations\NullOperation.cs" />
-    <Compile Include="Operations\Interfaces\IOperation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Operations\Implementations\Substitution.cs" />
-    <Compile Include="Operations\Implementations\Addition.cs" />
+    <Compile Include="Services\IStringValidator.cs" />
     <Compile Include="Services\Mapper.cs" />
     <Compile Include="Services\Parsing\CommandLineParser.cs" />
     <Compile Include="Services\Parsing\IParser.cs" />
     <Compile Include="Services\Printing\CommandLinePrinter.cs" />
     <Compile Include="Services\Printing\IPrinter.cs" />
+    <Compile Include="Services\StringValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

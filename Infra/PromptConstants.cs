@@ -7,6 +7,5 @@
         public const string ExitPrompt = "Press Ctrl-C to stop program.";
         public const string EmptySpace = " ";
         public const string UnknownParameter = "The parameter is unknown";
-        public const string Unknown = "Unknown";
     }
 }

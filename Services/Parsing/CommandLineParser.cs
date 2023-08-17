@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using SimpleCMDParser.Infra;
 using SimpleCMDParser.Services.Printing;
 
@@ -9,14 +9,20 @@ namespace SimpleCMDParser.Services.Parsing
         private const int MaxArgsNumber = 3;
         private const int EmptyNumberOfLines = 0;
         private readonly ICmdPrinter _printer;
-        public CommandLineParser(ICmdPrinter printer)
+        private readonly IStringValidator _validator;
+
+        public CommandLineParser(ICmdPrinter printer, IStringValidator validator)
         {
             _printer = printer;
+            _validator = validator;
         }
 
-        public void ParseLine(Queue<string> line)
+        public void ParseLine(string cmdline)
         {
-            while (line.Count > EmptyNumberOfLines)
+            _validator.Validate(cmdline);
+            
+            var arr = cmdline.ToCharArray();
+            while (arr.Length > 0)
             {
                 if (line.Count < MaxArgsNumber)
                 {
@@ -30,13 +36,12 @@ namespace SimpleCMDParser.Services.Parsing
                     _printer.PrintError(PromptConstants.UnknownParameter);
                     continue;
                 }
-                
+
                 string[] args = { line.Dequeue(), line.Dequeue() };
 
                 var operation = Mapper.GetOperation(command);
-                string result = operation.Execute(args[0], args[1]);
-                string message = operation.GetOutputMessage(command, args, result ?? PromptConstants.Unknown);
-                _printer.PrintStatement(message);
+                int? result = operation(Convert.ToInt32(args[0]), Convert.ToInt32(args[1]));
+                _printer.PrintStatement($"The sum of {args[0]} and {args[1]} is {result}.");
             }
         }
     }
