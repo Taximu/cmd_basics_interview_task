@@ -1,48 +1,105 @@
-## Task
-Develop a tool that reads input from the command line, parses the input and writes the output to the console.
+# 🛠️ Command-Line Tool
 
-CONDITIONS
--  The tool should be able to accept any command line parameters, parse them and write the corresponding output to the console.
--  The code should be written in an object oriented way and should show that object oriented design was understood and could be used by the programmer.
--  The code should contain short meaningful comments if necessary.
--  The program should be written in a way that it is flexible for potential future requirements and extensions.
--  Please do not use any frameworks or existing libraries to solve the problem as this would not show how you would solve the problem.
+A lightweight, object-oriented command-line utility built as an interview task. It showcases clean design, modular architecture, and the ability to parse and process various parameters — all **without external libraries or frameworks**.
 
-The following shows which are the command line parameters the tools should react on. Furthermore the corresponding 
-parsing operation and the expected output for every relevant parameter.
+---
 
-Example
--a [Value 1] [Value 2]
-Value 1: Number
-Value 2: Number
-Value 1 + Value 2
+## 📌 Overview
 
-"The sum of [Value 1] and [Value 2] is [Result]."
-Input:
--a 5 6
-Output:
-"The sum of 5 and 6 is 11."
+This project demonstrates a basic but extendable **command-line tool** that performs parsing operations based on provided flags. The implementation emphasizes:
 
--b [Value 1][Value 2]
-Value 1: String
-Value 2: Char
-Remove the char given in Value 2 from the string Value 1.
+- 🧱 Object-Oriented Design Principles
+- 📦 Clean Code Practices
+- ♻️ Extensibility Without Dependencies
 
-"[Value 1] without [Value 2] results in [Result]."
-Input:
--b "Microsoft" "t"
-Output:
-"Microsft" without "t" results in "Microsof".
+---
 
--c [Value 1][Value 2]
-Value 1: Number
-Value 2: Natural Number
-Value 1 raised to the power of Value 2.
+## 📋 Task Description
 
-"[Value 1] raised to the power of [Value 2] is [Result]."
-Input:
--c 2 3
-Output:
-"2 raised to the power of 3 is 8."
+Create a program that:
 
-Please structure the code in a way that additional parameters and operations could be added without much effort.
+- Accepts **command-line input**
+- Parses dynamic parameters
+- Performs specific operations
+- Follows a **modular, maintainable design**
+
+---
+
+## ✅ Requirements
+
+- 🔧 **Dynamic Parameter Handling** – No hard-coded inputs  
+- 🧠 **OOP Principles** – Encapsulation, abstraction, modularity  
+- 📝 **Meaningful Comments** – Explain logic where needed  
+- 🧩 **Extensible Architecture** – Easy to add new features  
+- 🚫 **No External Libraries** – Pure standard language features
+
+---
+
+## ⚙️ Supported Operations
+
+### ➕ `-a [Value 1] [Value 2]`
+**Add two numbers.**
+
+- **Input:** Two numeric values  
+- **Example:**  
+  ```bash
+  -a 5 6
+- **Output:**
+  ```bash
+  The sum of 5 and 6 is 11.
+
+### ✂️ `-b [Value 1] [Value 2]`
+**Remove a specific character from a string.**
+
+- **Input:**
+  Value 1: A string
+  Value 2: A single character
+
+- **Example:**
+  ```bash
+  -b "Microsoft" "t"
+- **Output:**
+  ```bash
+  "Microsoft" without "t" results in "Microsf."
+  
+### 🧮 -c `[Value 1] [Value 2]`
+**Exponentiation: Raise Value 1 to the power of Value 2.**
+
+- **Input:**
+  Value 1: Base (number)
+  Value 2: Exponent (natural number)
+
+- **Example:**
+  ```bash
+  -c 2 3
+- **Output:**
+  ```bash
+  2 raised to the power of 3 is 8.
+
+### 🚀 How to Run the Program
+1. Clone the repository to your local machine.
+2. Compile the code using an appropriate compiler or interpreter based on the programming language used.
+3. Execute the program by running the following commands:
+
+```bash
+<program_name> -a 5 6
+<program_name> -b "Microsoft" "t"
+<program_name> -c 2 3
+```
+The appropriate output will be printed to the console based on the input provided.
+
+### ➕ Extending the Tool
+To add support for new operations (e.g., -d), follow these simple steps:
+
+1. Create a new method to handle the operation in a modular class.
+2. Update the parameter-operation mapping to include the new command-line argument (-d).
+3. Ensure proper input validation and error handling for the new operation.
+4. This modular approach ensures the tool remains scalable and maintainable for future requirements.
+
+### 💡 Notes
+This program has been designed as a basic interview task to showcase:
+
+1. Coding fundamentals: Clarity, modularity, and object-oriented principles.
+2. Problem-solving skills: Building extensible systems from scratch.
+3. Practical design: Scalability for future changes.
+4. While simplistic in scope, it aims to demonstrate clean design, readability, and flexibility.
